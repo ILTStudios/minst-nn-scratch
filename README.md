@@ -41,7 +41,10 @@ A neural network can be understood as a **complex, multidimensional mathematical
 ## 2. Key mathematical pieces to understand
 
 ### Forward Pass
-![Layer Output Equation](https://latex.codecogs.com/png.latex?y%20%3D%20f%28W%20%5Ccdot%20x%20%2B%20b%29)  
+# Formula
+
+![Formula](https://wikimedia.org/api/rest_v1/media/math/render/svg/4f396cadb80fdca91d513da05d3c8c217d597a46)
+
 
 This is the forward pass for one layer of a network. Let's take the input layer to first hidden layer as an example.  
 
@@ -60,7 +63,7 @@ Categorical Cross-Entropy is a loss function used for multi-class classification
 
 The formula for one sample is:
 
-![Categorical Cross-Entropy Equation](https://latex.codecogs.com/png.latex?CCE%20%3D%20-%5Csum_%7Bi%3D1%7D%5E%7BC%7D%20y_i%20%5Clog%28%5Chat%7By%7D_i%29)
+![Forward and Backward Propagation Diagram](https://miro.medium.com/v2/resize:fit:774/0*vteMfTAGWsIZSaOW)
 
 Here we find the sum of the products of the natural logarithm of the predicted outcomes multiplied by what the outcome should've been. 
 
@@ -79,7 +82,7 @@ This is synonymous to numerical methods to find minima or roots such as the famo
 
 The Rectified Linear Unit (ReLU) is defined as:
 
-![ReLU Equation](https://latex.codecogs.com/png.latex?%5Ctext%7BReLU%7D%28x%29%20%3D%20%5Cmax%280%2C%20x%29)
+![Backpropagation Gradients](https://miro.medium.com/v2/resize:fit:732/1*LVV3mkrBnwdpcbelaePIqg.png)
 
 This will be delve into later
 
@@ -87,7 +90,7 @@ This will be delve into later
 
 The Softmax function converts a vector of values into probabilities:
 
-![Softmax Equation](https://latex.codecogs.com/png.latex?%5Csigma%28%5Cmathbf%7Bz%7D%29_i%20%3D%20%5Cfrac%7Be%5E%7Bz_i%7D%7D%7B%5Csum_%7Bj%7D%20e%5E%7Bz_j%7D%7D)
+![Backpropagation Pipeline](https://cdn.prod.website-files.com/60d1a7f6aeb33c5c595468b4/64f1b88c32bc6c0287ec6d27_4O_7Wfj5dV04MZdm0fUrGnxv1rGmHVl6TcXOn1qJyUA6blA1L8aimwdA3Fup5hTdm0luPtzlD-HW4StkqDANERDYcIXqbo3yZ01gd4AnzLk3KSBvgjLZwuV094i5eX9aAgdaW05PPZsQgt02Gi55iyc.png)
 
 This function outputs a probability distribtuion from an array of numbers. It is useful to interpret the output of the network at the last layer.
 
